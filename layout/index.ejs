@@ -1,7 +1,6 @@
  <div class="row">
   <div class="main index">
-
-  <% page.posts.each(function(post, i){ %>
+    <% site.tags.findOne({name: 'featured'}).posts.each(function(post, i) {%>
     <article>
       <a href="<%- url_for(post.path) %>" >
         <%if(post.cover){%>
@@ -10,7 +9,7 @@
           <header class="post-header">
         <%}%>
           <h1 class="post-title">
-            <!-- <a href="<%- url_for(post.path) %>" title="<%=post.title || __('no-title')%>" ><%=post.title || __('no-title')%></a> -->
+            <!-- <a href="<%- url_for(post.path) %>" title="<%=post.title || __('no title')%>" ><%=post.title || __('no-title')%></a> -->
             <span><%=post.title || __('no-title')%></span>
           </h1>
         </header>
@@ -47,7 +46,7 @@
         <%}%>
       </section>
       
-    </article>
+    </article> 
   <% }) %>
   <%- partial('partials/pagination') %>
   

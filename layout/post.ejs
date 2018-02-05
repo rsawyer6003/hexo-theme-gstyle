@@ -71,4 +71,10 @@
         </div>
     </aside>
     <%}%>
+    <%if(theme.sidebar&&theme.widgets.length){%>
+    <aside>
+        <%- partial('partials/widgets') %>
+    </aside>
+    <%}%>
 </div>
+
