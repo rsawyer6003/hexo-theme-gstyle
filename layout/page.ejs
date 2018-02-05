@@ -1,18 +1,19 @@
 <div class="row">
-    <div class="main">
+    <div class="main index">
         <article>
+        <a href="<%- %>" >
           <%if(page.cover){%>
-          <header class="post-header with-cover" style="background-image:url('<%- config.root+page.title+page.cover%>')" >
+            <header class="post-header with-cover" style="background-image:url('<%- config.root+page.title+page.cover%>')" >
           <%}else{%>
-          <header class="post-header">
+            <header class="post-header">
           <%}%>
+            <h1 class="post-title">
+              <span><%=page.Slug || __('no-title')%></span>
+            </h1>
           </header>
-<!--
-          <h1 class="post-title"><%= page.title %></h1>
---!>
+        </a>
+
           <section class="post-info">
-<!--            <span class="post-date"><%- date(page.date, 'YYYY/MM/DD') %></span>
---!>
             <% if (page.categories && page.categories.length && theme.show_post_category){ %>
             <span class="post-category">
                 <%- list_categories(page.categories, {
@@ -79,4 +80,3 @@
     </aside>
     <%}%>
 </div>
-

@@ -1,5 +1,5 @@
 home: Home
-archives: Archive
+archives: Articles
 about: About
 rss: RSS
 categories: Categories
@@ -13,7 +13,7 @@ comment: Comments
 archive_a: Archives
 archive_b: "Archives: %s"
 page: Page %d
-recent_posts: Recent Posts
+recent_posts: Recent Articles
 newer: Newer
 older: Older
 share: Share
@@ -21,6 +21,6 @@ powered_by: Powered by
 rss_feed: RSS Feed
 category: Category
 tag: Tag
-links: links
+links: Quick Links
 more: More...
-no-title: no title
+no-title: No Title

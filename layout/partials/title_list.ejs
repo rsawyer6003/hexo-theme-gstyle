@@ -7,13 +7,17 @@
                 </h3>
             <%}%>
             <% page.posts.each(function(article) { %>
-            <section>
+            <section class="post-title">
+              <span>
                 <a href="<%=url_for(article.path)%>">
-                    <%=article.title || __('no-title')%>
+                    <%=article.Slug || __('no-title')%>
                 </a>
+              </span>
+              <span>
                 <time class="post-date" datetime="<%=date_xml(article.date)%>">
                     <%=date(article.date)%>
                 </time>
+              </span>
             </section>
             <% }) %>
         </article>

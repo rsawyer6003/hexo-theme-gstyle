@@ -1,6 +1,6 @@
  <div class="row">
   <div class="main index">
-    <% site.tags.findOne({name: 'featured'}).posts.each(function(post, i) {%>
+    <% site.categories.findOne({name: 'featured'}).posts.each(function(post, i) {%>
     <article>
       <a href="<%- url_for(post.path) %>" >
         <%if(post.cover){%>
@@ -10,13 +10,12 @@
         <%}%>
           <h1 class="post-title">
             <!-- <a href="<%- url_for(post.path) %>" title="<%=post.title || __('no title')%>" ><%=post.title || __('no-title')%></a> -->
-            <span><%=post.title || __('no-title')%></span>
+            <span><%=post.Slug || __('no-title')%></span>
           </h1>
         </header>
       </a>
 
        <section class="post-info">
-        <span class="post-date"><%- date(post.date, 'YYYY/MM/DD') %></span>
           <% if (post.categories && post.categories.length&&theme.show_post_category){ %>
           <span class="post-category">
               <%- list_categories(post.categories, {
@@ -45,11 +44,11 @@
           <%- strip_html(truncate(post.content,{length:150})) %>
         <%}%>
       </section>
-      
-    </article> 
+
+    </article>
   <% }) %>
   <%- partial('partials/pagination') %>
-  
+
   </div>
   <%if(theme.sidebar&&theme.widgets.length){%>
     <aside>

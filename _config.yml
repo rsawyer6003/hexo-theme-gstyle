@@ -2,8 +2,8 @@
 menu:
   Home: /
   Services: /services
-#  Archives: /archives
   About Us: /about
+  archives: /archives
   Contact Us: /contact
 #  rss: /atom.xml
 
@@ -17,12 +17,12 @@ active_nav: true # show active status on nav menu
 
 sidebar: true # whether to show the sidebar
 widgets:
-  # - category
-  # - tag
-  - tagcloud
-  # - archive
-  - recent_posts
   - links
+  - recent_posts
+  - tagcloud
+  # - category
+  # - archive
+  # - tag
 links:
   #- title: "GitHub"
   #  url: http://www.github.com/wayou
@@ -30,14 +30,12 @@ links:
   #- title: "微博"
   #  url: http://www.weibo.com/liuwayong
   #  intro: "twitter的本地化版本"
-  - title: Isonas PA Cloud
+  - title: PureAccess Login
     url: https://isonaspureaccesscloud.com
     intro: "Pure Access Cloud Login"
 # disqus_shortname: wayou
 #duoshuo_shortname: wayouliu
 #site statistic
-google_analytics:  
+google_analytics:
 # baidu_analytics: 392796d51567e848aebf813b65cb8656
-baidu_analytics: 
-
-
+baidu_analytics:
